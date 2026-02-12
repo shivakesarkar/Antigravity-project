@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPrime — Transform Your Future with Expert-Led Learning</title>
+  <meta name="description"
+    content="Join 50,000+ students learning from India's finest educators. Expert courses, proven results, and personalized guidance to help you achieve your dreams." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ============================================
+       NAVBAR — Sticky Frosted Glass
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar__logo">Edu<span>Prime</span></a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <button class="navbar__cta" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">
+        Get Started →
+      </button>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO — Byju's Split Layout
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">India's #1 Learning Platform</div>
+        <h1 class="hero__title">
+          Unlock Your <span class="gradient-text">Full Potential</span> with Expert Guidance
+        </h1>
+        <p class="hero__subtitle">
+          Comprehensive learning programs designed by India's top educators.
+          Personalized study plans, live classes, and proven results — all in one place.
+        </p>
+
+        <form class="hero__form" id="heroForm" onsubmit="handleFormSubmit(event)">
+          <h3>📝 Book Your <span class="gradient-text">Admission</span></h3>
+          <div class="hero__form-group">
+            <input type="text" id="studentName" placeholder="Student's Full Name" required />
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required />
+            <select id="courseInterest" required>
+              <option value="" disabled selected>Select Course Interest</option>
+              <option value="jee">JEE Main & Advanced</option>
+              <option value="neet">NEET Preparation</option>
+              <option value="foundation">Foundation (8-10)</option>
+              <option value="boards">Board Exam Mastery</option>
+              <option value="coding">Coding & DSA</option>
+              <option value="upsc">UPSC / Civil Services</option>
+            </select>
+          </div>
+          <button type="submit" class="hero__form-btn">
+            Book Your Admission Now
+          </button>
+          <div class="hero__form-trust">
+            <svg width="14" height="14" fill="#2ecc71" viewBox="0 0 16 16">
+              <path
+                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.78 5.03-4.5 5.5a.75.75 0 0 1-1.12.02l-2-2a.75.75 0 0 1 1.06-1.06l1.42 1.42 3.96-4.84a.75.75 0 0 1 1.18.96z" />
+            </svg>
+            No spam • 100% free • Cancel anytime
+          </div>
+        </form>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=700&fit=crop&crop=faces"
+            alt="Happy students studying together" loading="eager" />
+        </div>
+        <div class="hero__float-badge hero__float-badge--top">
+          <div class="icon">🏆</div>
+          <div>
+            <div style="font-weight:700;">98% Success</div>
+            <div style="font-size:0.7rem;color:var(--clr-text-muted);">Pass Rate</div>
+          </div>
+        </div>
+        <div class="hero__float-badge hero__float-badge--bottom">
+          <div class="icon">⭐</div>
+          <div>
+            <div style="font-weight:700;">4.9 Rating</div>
+            <div style="font-size:0.7rem;color:var(--clr-text-muted);">50K+ Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TRUST STRIP — Physics Wallah Stat Bar
+       ============================================ -->
+  <section class="trust-strip" id="trustStrip">
+    <div class="container">
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span class="counter" data-target="50000">0</span><span>+</span></div>
+        <div class="stat-item__label">Active Students</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span class="counter" data-target="500">0</span><span>+</span></div>
+        <div class="stat-item__label">Expert Courses</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span class="counter" data-target="98">0</span><span>%</span></div>
+        <div class="stat-item__label">Success Rate</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span class="counter" data-target="150">0</span><span>+</span></div>
+        <div class="stat-item__label">Expert Faculty</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COURSES — Udemy Horizontal Scroll Cards
+       ============================================ -->
+  <section class="courses" id="courses">
+    <div class="container">
+      <div class="courses__header reveal">
+        <div>
+          <div class="section-tag">✨ Popular Courses</div>
+          <h2 class="section-title">Courses That <span class="gradient-text">Launch Careers</span></h2>
+          <p class="section-subtitle">Hand-picked by our experts. Designed for results. Loved by students.</p>
+        </div>
+        <div class="courses__arrows">
+          <button class="courses__arrow" id="scrollLeft" aria-label="Scroll left">←</button>
+          <button class="courses__arrow" id="scrollRight" aria-label="Scroll right">→</button>
+        </div>
+      </div>
+
+      <div class="courses__track" id="courseTrack">
+        <!-- Card 1 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=225&fit=crop"
+            alt="JEE Advanced Mathematics" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">JEE Advanced — Complete Mathematics Mastery</h3>
+            <p class="course-card__instructor">Dr. Rajesh Kumar • IIT Delhi</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.9</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(12,450)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹4,999</span>
+              <span class="course-card__price-original">₹14,999</span>
+              <span class="course-card__badge">67% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=225&fit=crop"
+            alt="NEET Biology" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">NEET Biology — Cell to System Complete Course</h3>
+            <p class="course-card__instructor">Dr. Priya Sharma • AIIMS Faculty</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.8</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(9,823)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹3,999</span>
+              <span class="course-card__price-original">₹11,999</span>
+              <span class="course-card__badge">66% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=225&fit=crop"
+            alt="Data Structures & Algorithms" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">DSA & Competitive Programming — Zero to Hero</h3>
+            <p class="course-card__instructor">Amit Verma • Ex-Google SDE</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.9</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(15,672)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹5,999</span>
+              <span class="course-card__price-original">₹18,999</span>
+              <span class="course-card__badge">68% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1453733190371-0a9bedd82893?w=400&h=225&fit=crop" alt="Physics" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">JEE & NEET Physics — Mechanics to Modern Physics</h3>
+            <p class="course-card__instructor">Prof. Sanjay Mishra • 20 Yrs Exp</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.8</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(8,190)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹4,499</span>
+              <span class="course-card__price-original">₹12,999</span>
+              <span class="course-card__badge">65% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=400&h=225&fit=crop" alt="Chemistry" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">Organic Chemistry — Reaction Mastery Course</h3>
+            <p class="course-card__instructor">Dr. Neha Gupta • IIT Bombay</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.7</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(6,340)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹3,499</span>
+              <span class="course-card__price-original">₹9,999</span>
+              <span class="course-card__badge">65% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=225&fit=crop"
+            alt="UPSC Preparation" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">UPSC GS — Complete Foundation to Mains</h3>
+            <p class="course-card__instructor">Arun Singh IAS • Rank 23</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.9</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(11,230)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹7,999</span>
+              <span class="course-card__price-original">₹24,999</span>
+              <span class="course-card__badge">68% OFF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="course-card">
+          <img class="course-card__image"
+            src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=225&fit=crop"
+            alt="Web Development" />
+          <div class="course-card__body">
+            <h3 class="course-card__title">Full Stack Web Development — MERN Bootcamp</h3>
+            <p class="course-card__instructor">Rohan Mehta • Tech Lead, Flipkart</p>
+            <div class="course-card__rating">
+              <span class="course-card__rating-num">4.8</span>
+              <span class="course-card__stars">★★★★★</span>
+              <span class="course-card__reviews">(7,890)</span>
+            </div>
+            <div class="course-card__price">
+              <span class="course-card__price-current">₹6,999</span>
+              <span class="course-card__price-original">₹19,999</span>
+              <span class="course-card__badge">65% OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RESULTS — Allen Topper Grid
+       ============================================ -->
+  <section class="results" id="results">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:var(--space-lg);" class="reveal">
+        <div class="section-tag">🏆 Our Toppers</div>
+        <h2 class="section-title">Results That <span class="gradient-text">Speak Volumes</span></h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+          Our students consistently achieve top ranks in national examinations. Here are some of our stars.
+        </p>
+      </div>
+
+      <div class="results__grid">
+        <!-- Topper 1 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?w=150&h=150&fit=crop&crop=face"
+            alt="Aarav Sharma" />
+          <h3 class="result-card__name">Aarav Sharma</h3>
+          <div class="result-card__achievement">🥇 AIR 12</div>
+          <div class="result-card__score">99.8%ile</div>
+          <div class="result-card__exam">JEE Advanced 2025</div>
+          <p class="result-card__quote">EduPrime's structured approach and amazing faculty helped me crack JEE with
+            flying colors!</p>
+        </div>
+
+        <!-- Topper 2 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1611432579699-484f7990b127?w=150&h=150&fit=crop&crop=face"
+            alt="Ishita Deshmukh" />
+          <h3 class="result-card__name">Ishita Deshmukh</h3>
+          <div class="result-card__achievement">🥇 AIR 5</div>
+          <div class="result-card__score">720/720</div>
+          <div class="result-card__exam">NEET 2025</div>
+          <p class="result-card__quote">The biology course was incredibly detailed. I could visualize every concept
+            perfectly.</p>
+        </div>
+
+        <!-- Topper 3 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=face"
+            alt="Rohit Chaudhary" />
+          <h3 class="result-card__name">Rohit Chaudhary</h3>
+          <div class="result-card__achievement">🥈 AIR 28</div>
+          <div class="result-card__score">99.5%ile</div>
+          <div class="result-card__exam">JEE Advanced 2025</div>
+          <p class="result-card__quote">The mock tests and doubt-clearing sessions were game-changers in my preparation.
+          </p>
+        </div>
+
+        <!-- Topper 4 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=150&h=150&fit=crop&crop=face"
+            alt="Kavya Krishnan" />
+          <h3 class="result-card__name">Kavya Krishnan</h3>
+          <div class="result-card__achievement">🥇 AIR 3</div>
+          <div class="result-card__score">715/720</div>
+          <div class="result-card__exam">NEET 2025</div>
+          <p class="result-card__quote">Best decision I ever made. The faculty treats every student like their own
+            child.</p>
+        </div>
+
+        <!-- Topper 5 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+            alt="Devendra Tiwari" />
+          <h3 class="result-card__name">Devendra Tiwari</h3>
+          <div class="result-card__achievement">⭐ Rank 47</div>
+          <div class="result-card__score">UPSC CSE</div>
+          <div class="result-card__exam">Civil Services 2025</div>
+          <p class="result-card__quote">The answer writing practice and mentorship were exceptional. Forever grateful!
+          </p>
+        </div>
+
+        <!-- Topper 6 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+            alt="Nandini Kulkarni" />
+          <h3 class="result-card__name">Nandini Kulkarni</h3>
+          <div class="result-card__achievement">🥇 AIR 8</div>
+          <div class="result-card__score">99.9%ile</div>
+          <div class="result-card__exam">JEE Main 2025</div>
+          <p class="result-card__quote">From average student to AIR 8 — EduPrime believed in me when I didn't believe in
+            myself.</p>
+        </div>
+
+        <!-- Topper 7 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1614289371518-722f2615943d?w=150&h=150&fit=crop&crop=face"
+            alt="Suresh Venkataraman" />
+          <h3 class="result-card__name">Suresh Venkataraman</h3>
+          <div class="result-card__achievement">🥈 AIR 15</div>
+          <div class="result-card__score">710/720</div>
+          <div class="result-card__exam">NEET 2025</div>
+          <p class="result-card__quote">The video lectures were so engaging that I actually fell in love with Organic
+            Chemistry!</p>
+        </div>
+
+        <!-- Topper 8 -->
+        <div class="result-card reveal">
+          <img class="result-card__avatar"
+            src="https://images.unsplash.com/photo-1601288496920-b6154fe3626a?w=150&h=150&fit=crop&crop=face"
+            alt="Pooja Bhattacharya" />
+          <h3 class="result-card__name">Pooja Bhattacharya</h3>
+          <div class="result-card__achievement">⭐ Selected</div>
+          <div class="result-card__score">₹42 LPA</div>
+          <div class="result-card__exam">Google SDE — Placed</div>
+          <p class="result-card__quote">The DSA course was hands-down the best resource. Got placed at Google in my
+            first attempt!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FACULTY — One Medical Clean Profile
+       ============================================ -->
+  <section class="faculty" id="faculty">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:var(--space-lg);" class="reveal">
+        <div class="section-tag">👨‍🏫 Meet Our Experts</div>
+        <h2 class="section-title">Learn from <span class="gradient-text">India's Best</span></h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+          Handpicked educators from IITs, AIIMS, and top institutions who are passionate about teaching.
+        </p>
+      </div>
+
+      <div class="faculty__grid">
+        <!-- Faculty 1 -->
+        <div class="faculty-card reveal">
+          <img class="faculty-card__avatar"
+            src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=200&h=200&fit=crop&crop=face"
+            alt="Dr. Ramesh Iyer" />
+          <h3 class="faculty-card__name">Dr. Ramesh Iyer</h3>
+          <p class="faculty-card__specialization">Mathematics | JEE Advanced</p>
+          <div class="faculty-card__credentials">
+            <span class="faculty-card__cred-tag">IIT Delhi</span>
+            <span class="faculty-card__cred-tag">PhD Maths</span>
+            <span class="faculty-card__cred-tag">22 Yrs Exp</span>
+          </div>
+          <p class="faculty-card__bio">
+            Former HOD of Mathematics at a leading coaching institute. Known for simplifying complex calculus concepts
+            and helping 500+ students secure IIT seats.
+          </p>
+          <div class="faculty-card__stats">
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">500+</div>
+              <div class="faculty-card__stat-label">IIT Selections</div>
+            </div>
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">4.9</div>
+              <div class="faculty-card__stat-label">Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="faculty-card reveal">
+          <img class="faculty-card__avatar"
+            src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=200&h=200&fit=crop&crop=face"
+            alt="Dr. Sunita Devi" />
+          <h3 class="faculty-card__name">Dr. Sunita Devi</h3>
+          <p class="faculty-card__specialization">Biology | NEET</p>
+          <div class="faculty-card__credentials">
+            <span class="faculty-card__cred-tag">AIIMS Delhi</span>
+            <span class="faculty-card__cred-tag">MBBS, MD</span>
+            <span class="faculty-card__cred-tag">15 Yrs Exp</span>
+          </div>
+          <p class="faculty-card__bio">
+            A practicing doctor turned educator. Her 3D visualization teaching method has helped 300+ students score
+            700+ in NEET. Pioneer of conceptual biology teaching.
+          </p>
+          <div class="faculty-card__stats">
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">300+</div>
+              <div class="faculty-card__stat-label">NEET 700+</div>
+            </div>
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">4.9</div>
+              <div class="faculty-card__stat-label">Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="faculty-card reveal">
+          <img class="faculty-card__avatar"
+            src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?w=200&h=200&fit=crop&crop=face"
+            alt="Manish Agarwal" />
+          <h3 class="faculty-card__name">Manish Agarwal</h3>
+          <p class="faculty-card__specialization">DSA & Competitive Programming</p>
+          <div class="faculty-card__credentials">
+            <span class="faculty-card__cred-tag">Ex-Google</span>
+            <span class="faculty-card__cred-tag">IIT Bombay</span>
+            <span class="faculty-card__cred-tag">10 Yrs Exp</span>
+          </div>
+          <p class="faculty-card__bio">
+            Former Google SDE-III with a passion for teaching. His DSA bootcamp has helped 1000+ students secure offers
+            at FAANG companies. Codeforces red-rated.
+          </p>
+          <div class="faculty-card__stats">
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">1000+</div>
+              <div class="faculty-card__stat-label">Placed at FAANG</div>
+            </div>
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">4.9</div>
+              <div class="faculty-card__stat-label">Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 4 -->
+        <div class="faculty-card reveal">
+          <img class="faculty-card__avatar"
+            src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=200&h=200&fit=crop&crop=face"
+            alt="Prof. Harish Chandra" />
+          <h3 class="faculty-card__name">Prof. Harish Chandra</h3>
+          <p class="faculty-card__specialization">Physics | JEE & NEET</p>
+          <div class="faculty-card__credentials">
+            <span class="faculty-card__cred-tag">IIT Kanpur</span>
+            <span class="faculty-card__cred-tag">M.Tech</span>
+            <span class="faculty-card__cred-tag">20 Yrs Exp</span>
+          </div>
+          <p class="faculty-card__bio">
+            Known as the "Physics Magician." Makes Mechanics and Electrodynamics intuitive with real-world analogies.
+            Author of 3 bestselling physics reference books.
+          </p>
+          <div class="faculty-card__stats">
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">800+</div>
+              <div class="faculty-card__stat-label">Top Rankers</div>
+            </div>
+            <div class="faculty-card__stat">
+              <div class="faculty-card__stat-num">4.8</div>
+              <div class="faculty-card__stat-label">Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER — Mayo Clinic Detailed Layout
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo" style="font-size:1.8rem;">Edu<span>Prime</span></a>
+          <p>
+            India's most trusted education platform. We empower students with world-class courses,
+            expert faculty, and personalized learning journeys to achieve their dream careers.
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-icon" aria-label="YouTube">▶</a>
+            <a href="#" class="footer__social-icon" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-icon" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer__social-icon" aria-label="Telegram">✈</a>
+          </div>
+          <div class="footer__newsletter" style="margin-top: 1rem;">
+            <input type="email" placeholder="Enter your email" aria-label="Newsletter email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <a href="#courses">All Courses</a>
+          <a href="#results">Results</a>
+          <a href="#faculty">Our Faculty</a>
+          <a href="#">Blog & Resources</a>
+          <a href="#">Careers at EduPrime</a>
+          <a href="#">Refer & Earn</a>
+        </div>
+
+        <!-- Support -->
+        <div class="footer__col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">FAQs</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+
+        <!-- Location & Map -->
+        <div class="footer__col">
+          <h4>Visit Us</h4>
+          <div class="footer__map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5!2d77.209!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1"
+              allowfullscreen="" loading="lazy" title="EduPrime Office Location"></iframe>
+          </div>
+          <div class="footer__address">
+            <strong>EduPrime HQ</strong>
+            Tower B, 14th Floor, Connaught Place<br />
+            New Delhi, India — 110001<br />
+            📞 +91 98765 43210<br />
+            ✉️ hello@eduprime.in
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2025 EduPrime. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       PAYMENT MODAL — Purchase Overlay
+       ============================================ -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal">
+      <button class="modal__close" id="modalClose" aria-label="Close">&times;</button>
+
+      <!-- Modal Header -->
+      <div class="modal__header">
+        <div class="modal__course-badge">🛒 Secure Checkout</div>
+        <h2 class="modal__title" id="modalCourseTitle">Course Name</h2>
+        <p class="modal__instructor" id="modalInstructor">Instructor Name</p>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal__body">
+        <!-- Order Summary -->
+        <div class="modal__summary">
+          <h3>Order Summary</h3>
+          <div class="modal__summary-row">
+            <span>Course Price</span>
+            <span class="modal__original-price" id="modalOriginalPrice">₹14,999</span>
+          </div>
+          <div class="modal__summary-row modal__discount-row">
+            <span>Discount</span>
+            <span class="modal__discount" id="modalDiscount">- ₹10,000</span>
+          </div>
+          <div class="modal__summary-divider"></div>
+          <div class="modal__summary-row modal__total-row">
+            <span>Total</span>
+            <span class="modal__total-price" id="modalTotalPrice">₹4,999</span>
+          </div>
+        </div>
+
+        <!-- Payment Methods -->
+        <div class="modal__payment">
+          <h3>Payment Method</h3>
+          <div class="modal__tabs">
+            <button class="modal__tab active" data-tab="upi">📱 UPI</button>
+            <button class="modal__tab" data-tab="card">💳 Card</button>
+            <button class="modal__tab" data-tab="netbank">🏦 Net Banking</button>
+          </div>
+
+          <!-- UPI Tab -->
+          <div class="modal__tab-content active" id="tab-upi">
+            <div class="modal__field">
+              <label>UPI ID</label>
+              <input type="text" placeholder="yourname@paytm / yourname@upi" id="upiId" />
+            </div>
+          </div>
+
+          <!-- Card Tab -->
+          <div class="modal__tab-content" id="tab-card">
+            <div class="modal__field">
+              <label>Card Number</label>
+              <input type="text" placeholder="1234 5678 9012 3456" id="cardNumber" maxlength="19" />
+            </div>
+            <div class="modal__field-row">
+              <div class="modal__field">
+                <label>Expiry</label>
+                <input type="text" placeholder="MM/YY" id="cardExpiry" maxlength="5" />
+              </div>
+              <div class="modal__field">
+                <label>CVV</label>
+                <input type="password" placeholder="•••" id="cardCvv" maxlength="3" />
+              </div>
+            </div>
+            <div class="modal__field">
+              <label>Cardholder Name</label>
+              <input type="text" placeholder="Name on card" id="cardName" />
+            </div>
+          </div>
+
+          <!-- Net Banking Tab -->
+          <div class="modal__tab-content" id="tab-netbank">
+            <div class="modal__field">
+              <label>Select Bank</label>
+              <select id="bankSelect">
+                <option value="" disabled selected>Choose your bank</option>
+                <option value="sbi">State Bank of India</option>
+                <option value="hdfc">HDFC Bank</option>
+                <option value="icici">ICICI Bank</option>
+                <option value="axis">Axis Bank</option>
+                <option value="kotak">Kotak Mahindra Bank</option>
+                <option value="pnb">Punjab National Bank</option>
+                <option value="bob">Bank of Baroda</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon Code -->
+        <div class="modal__coupon">
+          <input type="text" placeholder="Have a coupon code?" id="couponInput" />
+          <button id="couponApply">Apply</button>
+        </div>
+
+        <!-- Pay Button -->
+        <button class="modal__pay-btn" id="payBtn">
+          <span class="modal__pay-icon">🔒</span>
+          Pay <span id="payAmount">₹4,999</span> Securely
+        </button>
+
+        <!-- Trust -->
+        <div class="modal__trust">
+          <span>🔒 256-bit SSL Encrypted</span>
+          <span>✅ 7-Day Refund Policy</span>
+          <span>📞 24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
